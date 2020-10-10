@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>zmlynarc Week 07 Homework</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="base.css">
+        <style>
+        /* flexbox css */
+        .row {display: flex;}
+        .col {flex: 1;
+        margin-right: 15px;}
+        .col-3 {flex: 3;}
+        /* col is flex item within flex container */
+        </style>
+    </head>
+    <body>
+    <div class="page-container">
+        <!-- the header and nav elements are pretty standard, using float rather than flexbox -->
+        <header>
+            <div id="logo">
+                <img src="images/W7-lab-logo.png" alt="logo"/>
+            </div>
+            <div id="search">
+                <input />
+                <div id="search-btn">
+                <i class="fa fa-search"></i>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Lorem ipsum&nbsp;&nbsp;&nbsp;Lorem ipsum&nbsp;&nbsp;&nbsp;Lorem ipsum
+        </nav>
+        <!-- here's where the fun begins: apply classes from internal flexbox styles above to define the main as a flex container with display:flex; and the container divs as flex items with flex:[some number of columns]; -->
+        <main class="row" id="top-panel">
+            <!-- left banner container should be 3 times as wide as the right one -->
+            <div class="col-3" id="top-banner">
+                <div id="banner-heading">
+        <h1>Home Page Banner</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit<br>
+        <a href="#">Read more</a></p>
+                </div>
+            </div>
+            <!-- right banner container -->
+            <div class="col" id="banner-list">
+                <h2>Lorem Ipsum</h2>
+                <p>Intro paragraph...</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </main>
+        <!-- so much for the main, now apply a class to define the middle section of the page as a flex container -->
+        <section class="row" id="page-center">
+            <!-- and here's the first container div in the section -->
+            <div class="col">
+                <h2 class="padded">Lorem ipsum</h2>
+                <section class="row grid-row">
+                <div class="col">
+                    <div>
+                        <img src="images/W7-lab-grid-image.png" alt="grid image"/>
+                    </div>
+                    <div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>box text goes here</p>
+                    </div>
+                </div> 
+                <!-- here's the second container div in the section -->
+                <div class="col">
+                    <div>
+                        <img src="images/W7-lab-grid-image.png" alt="grid image"/>
+                    </div>
+                    <div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>box text goes here</p>
+                    </div>
+                </div>       
+                </section>
+                <!-- the second section in the middle-left needs to be a flex container -->
+                <section class="row grid-row"><!-- note that class .grid-row does something else -- look at base.css to see what -->
+                <!-- the container div needs to be a flex item -->
+                <div class="col-3">
+                    <div>
+                        <img src="images/W7-lab-grid-image.png" alt="grid image"/>
+                    </div>
+                    <div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>box text goes here</p>
+                    </div>
+                </div>
+                <!-- also a flex item -->
+                <div class="col">
+                    <div>
+                        <img src="images/W7-lab-grid-image.png" alt="grid image"/>
+                    </div>
+                    <div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>box text goes here</p>
+                    </div>
+                </div>
+                </section>
+                <!-- this aside is outside the two flexbox sections above & just uses float -->
+                <aside class= "col" id="extra-img">
+                    <img src="images/W7-lab-square-image.png" alt="square" />
+                    <p><strong>Lorem ipsum</strong>
+                    <br><br>
+                    Lorem ipsum dolor sit</p>
+                </aside>
+            </div>
+            <!-- here's the container aside for the middle-right and it needs to be a flex **item** -->
+            <aside class="col" id="center-right">
+                <img src="images/W7-lab-animation-image.png" alt="animation" />
+                <h2 class="padded">
+                Lorem Ipsum
+                </h2>
+                <ul>
+                    <li class="spaced-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta, ipsam provident sit aspernatur numquam neque nihil placeat saepe repellat nobis inventore. Est reprehenderit porro enim quisquam iure rerum eaque!</li>
+                    <li class="spaced-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta, ipsam provident sit aspernatur numquam neque nihil placeat saepe repellat nobis inventore. Est reprehenderit porro enim quisquam iure rerum eaque!</li>
+                    <li class="spaced-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta, ipsam provident sit aspernatur numquam neque nihil placeat saepe repellat nobis inventore. Est reprehenderit porro enim quisquam iure rerum eaque!</li>
+                </ul>
+            </aside>        
+        </section>
+        <!-- continue on down the page adding flex container classes to the sections and flex item classes **of the correct width** to the divs -->
+        <section class="row" id="bottom-row">
+            <div class="col-3">
+                <h2 class="padded">Lorem Ipsum</h2>
+                <ul>
+                    <li class="spaced-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta, ipsam provident sit aspernatur numquam neque nihil placeat saepe repellat nobis inventore. Est reprehenderit porro enim quisquam iure rerum eaque!</li>
+                    <li class="spaced-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta, ipsam provident sit aspernatur numquam neque nihil placeat saepe repellat nobis inventore. Est reprehenderit porro enim quisquam iure rerum eaque!</li>                
+                </ul>
+            </div>
+            <div class="col" id="social">
+                <h3>Lorem Ipsum</h3>
+                <p style="font-size: 32px;"><i class="fa fa-rss-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-facebook-square"></i></p>
+            </div>
+        </section>
+        <!-- here's the final set of flexboxes across the foot of the page -->
+        <aside class="row" id="carousel">
+            <div class="col">
+                <img src="images/W7-lab-carousel-image.png" alt="carousel image"/>
+            </div>
+            <div class="col">
+                <img src="images/W7-lab-carousel-image.png" alt="carousel image"/>
+            </div>
+            <div class="col">
+                <img src="images/W7-lab-carousel-image.png" alt="carousel image"/>
+            </div>
+            <div class="col">
+                <img src="images/W7-lab-carousel-image.png" alt="carousel image"/>
+            </div>
+        </aside>
+    </div>
+
+    
+</body></html>
